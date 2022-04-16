@@ -23,13 +23,13 @@ public class Driver {
     job_conf.setJobName("PaymentByCountry");
 
     job_conf.setOutputKeyClass(Text.class);
-    job_conf.setOutputValueClass(IntWritable.class);
+    job_conf.setOutputValueClass(DoubleWritable.class);
 
     job_conf.setMapperClass(PaymentByCountry.PCMapper.class);
     job_conf.setReducerClass(PaymentByCountry.PCReducer.class);
 
     job_conf.setOutputKeyClass(Text.class);
-    job_conf.setOutputValueClass(IntWritable.class);
+    job_conf.setOutputValueClass(DoubleWritable.class);
     
     // Set input and output directories using command line arguments,
     // arg[0] = name of the user
