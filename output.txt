@@ -1,0 +1,56 @@
+Argentina		1200.0
+Australia		64800.0
+Austria		10800.0
+Bahrain		1200.0
+Belgium		12000.0
+Bermuda		1200.0
+Brazil		12300.0
+Bulgaria		1200.0
+Canada		124800.0
+Cayman Isls		1200.0
+China		1200.0
+Costa Rica		1200.0
+Czech Republic		6000.0
+Denmark		18000.0
+Dominican Republic		1200.0
+Finland		2400.0
+France		53100.0
+Germany		42000.0
+Greece		1200.0
+Guatemala		1200.0
+Hong Kong		1200.0
+Hungary		3600.0
+Iceland		1200.0
+India		2400.0
+Ireland		69900.0
+Israel		1200.0
+Italy		37800.0
+Japan		2400.0
+Jersey		1200.0
+Kuwait		1200.0
+Latvia		1200.0
+Luxembourg		1200.0
+Malaysia		1200.0
+Malta		4800.0
+Mauritius		3600.0
+Moldova		1200.0
+Monaco		2400.0
+Netherlands		44700.0
+New Zealand		7200.0
+Norway		21600.0
+Philippines		2400.0
+Poland		2400.0
+Romania		1200.0
+Russia		3600.0
+South Africa		12300.0
+South Korea		1200.0
+Spain		16800.0
+Sweden		22800.0
+Switzerland		76800.0
+Thailand		4800.0
+The Bahamas		2400.0
+Turkey		7200.0
+Ukraine		1200.0
+United Arab Emirates		12000.0
+United Kingdom		144000.0
+United States		750000.0
