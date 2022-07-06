@@ -1,4 +1,4 @@
-package PaymentByCountry;
+package KpiByAirport;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
@@ -20,22 +20,20 @@ public class Driver {
 
     // Create a configuration object for the job
     JobConf job_conf = new JobConf(Driver.class);
-    job_conf.setJobName("PaymentByCountry");
+    job_conf.setJobName("KpiByAirport");
 
     job_conf.setOutputKeyClass(Text.class);
-    job_conf.setOutputValueClass(DoubleWritable.class);
+    job_conf.setOutputValueClass(KpiByAirport.TextArrayWritable.class);
 
-    job_conf.setMapperClass(PaymentByCountry.PCMapper.class);
-    job_conf.setReducerClass(PaymentByCountry.PCReducer.class);
+    job_conf.setMapperClass(KpiByAirport.PCMapper.class);
+    job_conf.setReducerClass(KpiByAirport.PCReducer.class);
 
-    job_conf.setOutputKeyClass(Text.class);
-    job_conf.setOutputValueClass(DoubleWritable.class);
     
     // Set input and output directories using command line arguments,
     // arg[0] = name of the user
 
-    FileInputFormat.addInputPath(job_conf, new Path("/user/" + args[0] + "/sales/input"));
-    FileOutputFormat.setOutputPath(job_conf, new Path("/user/" + args[0] + "/sales/output"));
+    FileInputFormat.addInputPath(job_conf, new Path("/user/" + args[0] + "/kpi/input"));
+    FileOutputFormat.setOutputPath(job_conf, new Path("/user/" + args[0] + "/kpi/output"));
 
     my_client.setConf(job_conf);
     try {
