@@ -1,4 +1,4 @@
-package KpiByAirport;
+package KpiByAirline;
 
 import java.io.IOException;
 
@@ -6,9 +6,9 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.*;
 
-public class PCMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, KpiByAirport.TextArrayWritable> {
+public class PCMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, KpiByAirline.TextArrayWritable> {
 
-    public void map(LongWritable key, Text value, OutputCollector<Text, KpiByAirport.TextArrayWritable> output, Reporter reporter)
+    public void map(LongWritable key, Text value, OutputCollector<Text, KpiByAirline.TextArrayWritable> output, Reporter reporter)
         throws IOException {
 
         String line = value.toString();
@@ -27,8 +27,8 @@ public class PCMapper extends MapReduceBase implements Mapper<LongWritable, Text
         String[] outValue = {data[3], pontual};
 
         output.collect(
-            new Text(data[1] + "\t"),
-            new KpiByAirport.TextArrayWritable( outValue )
+            new Text(data[2] + "\t"),
+            new KpiByAirline.TextArrayWritable( outValue )
         );
     }
 }

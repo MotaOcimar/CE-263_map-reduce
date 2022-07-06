@@ -1,4 +1,4 @@
-package KpiByAirport;
+package KpiByAirline;
 
 import java.io.IOException;
 import java.util.*;
@@ -7,9 +7,9 @@ import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.*;
 
-public class PCReducer extends MapReduceBase implements Reducer<Text, KpiByAirport.TextArrayWritable, Text, Text> {
+public class PCReducer extends MapReduceBase implements Reducer<Text, KpiByAirline.TextArrayWritable, Text, Text> {
 
-  public void reduce(Text key, Iterator<KpiByAirport.TextArrayWritable> values, OutputCollector<Text, Text> output,
+  public void reduce(Text key, Iterator<KpiByAirline.TextArrayWritable> values, OutputCollector<Text, Text> output,
       Reporter reporter) throws IOException {
 
     Double kpi01 = 0.0;

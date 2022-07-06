@@ -1,4 +1,4 @@
-package KpiByAirport;
+package KpiByAirline;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
@@ -20,13 +20,13 @@ public class Driver {
 
     // Create a configuration object for the job
     JobConf job_conf = new JobConf(Driver.class);
-    job_conf.setJobName("KpiByAirport");
+    job_conf.setJobName("KpiByAirline");
 
     job_conf.setOutputKeyClass(Text.class);
-    job_conf.setOutputValueClass(KpiByAirport.TextArrayWritable.class);
+    job_conf.setOutputValueClass(KpiByAirline.TextArrayWritable.class);
 
-    job_conf.setMapperClass(KpiByAirport.PCMapper.class);
-    job_conf.setReducerClass(KpiByAirport.PCReducer.class);
+    job_conf.setMapperClass(KpiByAirline.PCMapper.class);
+    job_conf.setReducerClass(KpiByAirline.PCReducer.class);
 
     
     // Set input and output directories using command line arguments,

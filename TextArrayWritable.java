@@ -1,4 +1,4 @@
-package KpiByAirport;
+package KpiByAirline;
 
 import org.apache.hadoop.io.ArrayWritable;
 import org.apache.hadoop.io.Text;
