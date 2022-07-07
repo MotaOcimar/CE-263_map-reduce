@@ -30,10 +30,10 @@ public class PCReducer extends MapReduceBase implements Reducer<Text, KpiByAirli
       }
     }
 
-    kpi01 = kpi01/count01;
-    kpi14 = kpi14/count14;
+    kpi01 = kpi01/count01 * 100;
+    kpi14 = kpi14/count14 * 100;
 
-    String outValue = "kpi01: " + kpi01.toString() + "\tkpi14: " +  kpi14.toString();
+    String outValue = "kpi01: " + kpi01.toString() + " (" + count01 + " voos) " + "\tkpi14: " +  kpi14.toString() + " (" + count14 + " voos) ";
 
     output.collect(key, new Text( outValue ));
   }

@@ -4,7 +4,7 @@ Dá um clean start:
 stop-dfs.sh
 stop-yarn.sh
 
-hadoop namenode -format
+hdfs namenode -format
 
 start-dfs.sh
 start-yarn.sh
